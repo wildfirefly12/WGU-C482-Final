@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="addPartAnchor" prefHeight="342.0" prefWidth="401.0" style="-fx-background-color: #e0e0e0;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.AddPartController">
+   <children>
+      <Label fx:id="addPartLabel" layoutX="22.0" layoutY="21.0" text="Add Part" textFill="#342797">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+      <RadioButton fx:id="addPartInHouseRadio" layoutX="156.0" layoutY="26.0" mnemonicParsing="false" selected="true" text="In-House">
+         <toggleGroup>
+            <ToggleGroup fx:id="newPart" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="addPartOutsourcedRadio" layoutX="251.0" layoutY="26.0" mnemonicParsing="false" text="Outsourced" toggleGroup="$newPart" />
+      <Label fx:id="addPartMaxLabel" layoutX="62.0" layoutY="219.0" text="Max" />
+      <TextField fx:id="addPartNameField" layoutX="164.0" layoutY="99.0" promptText="Part Name" />
+      <TextField fx:id="addPartInvField" layoutX="164.0" layoutY="138.0" promptText="Inv" />
+      <TextField fx:id="addPartPriceField" layoutX="164.0" layoutY="174.0" promptText="Price/Cost" />
+      <TextField fx:id="addPartMaxField" layoutX="164.0" layoutY="215.0" prefHeight="25.0" prefWidth="70.0" promptText="Max" />
+      <TextField fx:id="addPartMinField" layoutX="286.0" layoutY="215.0" prefHeight="25.0" prefWidth="70.0" promptText="Min" />
+      <GridPane fx:id="addPartGrid" layoutX="56.0" layoutY="254.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="119.33331298828125" minWidth="10.0" prefWidth="109.33331298828125" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="93.33331298828125" minWidth="10.0" prefWidth="90.66668701171875" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="addPartMachIDLabel" prefHeight="17.0" prefWidth="108.0" text="Machine ID" />
+            <TextField fx:id="addPartMachIDField" prefHeight="25.0" prefWidth="99.0" promptText="Machine  ID" GridPane.columnIndex="1" />
+            <TextField fx:id="addPartCompNameField" prefHeight="25.0" prefWidth="99.0" promptText="Comp Nm" GridPane.columnIndex="1" />
+            <Label fx:id="addPartCompNameLabel" prefHeight="17.0" prefWidth="108.0" text="Company Name" />
+         </children>
+      </GridPane>
+      <Label fx:id="addPartMinLabel" layoutX="250.0" layoutY="219.0" text="Min" />
+      <Label fx:id="addPartNameLabel" layoutX="60.0" layoutY="103.0" text="Name" />
+      <Label fx:id="addPartInvLabel" layoutX="62.0" layoutY="142.0" text="Inv" />
+      <Label fx:id="addPartPriceLabel" layoutX="62.0" layoutY="178.0" text="Price/Cost" />
+      <Label fx:id="addPartIDLabel" layoutX="62.0" layoutY="64.0" text="ID" />
+      <Button fx:id="addPartCancelButton" layoutX="295.0" layoutY="299.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="72.0" text="Cancel" />
+      <Button fx:id="addPartSaveButton" layoutX="210.0" layoutY="299.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="72.0" text="Save" />
+      <HBox fx:id="addPartIDField" layoutX="163.0" layoutY="60.0" prefHeight="25.0" prefWidth="149.0" style="-fx-border-color: CCCCCC;">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="147.0" text="AUTOGEN - Disabled" textFill="GREY" />
+         </children>
+      </HBox>
+   </children>
+   <opaqueInsets>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </opaqueInsets>
+</AnchorPane>
